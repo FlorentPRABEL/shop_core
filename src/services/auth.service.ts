@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { Customer, UUID } from '@swisscommerce/types';
-import { generateToken, generateSecureCode } from '@swisscommerce/utils';
+import { Customer, UUID } from '@shopen/types';
+import { generateToken, generateSecureCode } from '@shopen/utils';
 import { RedisService } from './redis.service';
 import { JWT_CONFIG, CACHE_TTL } from '../constants';
 

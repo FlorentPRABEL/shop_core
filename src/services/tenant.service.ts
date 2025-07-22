@@ -1,10 +1,10 @@
-import { Tenant, TenantConfig, Plan, Subscription } from '@swisscommerce/types';
+import { Tenant, TenantConfig, Plan, Subscription } from '@shopen/types';
 import { 
   extractTenantFromHost, 
   isCustomDomain, 
   isValidTenantSlug,
   generateSchemaName 
-} from '@swisscommerce/utils';
+} from '@shopen/utils';
 import { PrismaService } from './prisma.service';
 import { RedisService } from './redis.service';
 import { CACHE_TTL, REDIS_KEYS } from '../constants';
@@ -165,7 +165,7 @@ export class TenantService {
         data: {
           name: data.name,
           slug: data.slug,
-          domain: `${data.slug}.${process.env.BASE_DOMAIN || 'swisscommerce.ch'}`,
+          domain: `${data.slug}.${process.env.BASE_DOMAIN || 'shopen.ch'}`,
           region: data.region || 'CH-FR',
           settings: {
             general: {

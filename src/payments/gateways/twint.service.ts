@@ -50,7 +50,7 @@ export class TwintService implements PaymentGateway {
           callbackUrl: `${this.configService.get('API_URL')}/api/webhooks/twint`,
           successUrl: params.returnUrl || `${this.configService.get('FRONTEND_URL')}/checkout/success`,
           cancelUrl: params.cancelUrl || `${this.configService.get('FRONTEND_URL')}/checkout/cancel`,
-          description: params.description || 'SwissCommerce Order',
+          description: params.description || 'Shopen Order',
           customerInfo: params.customer ? {
             email: params.customer.email,
             phone: params.customer.phone

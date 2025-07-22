@@ -18,8 +18,8 @@ export const REDIS_KEYS = {
 export const JWT_CONFIG = {
   ACCESS_TOKEN_EXPIRY: '15m',
   REFRESH_TOKEN_EXPIRY: '7d',
-  ISSUER: 'swisscommerce',
-  AUDIENCE: 'swisscommerce-api',
+  ISSUER: 'shopen',
+  AUDIENCE: 'shopen-api',
 } as const;
 
 export const PAGINATION = {

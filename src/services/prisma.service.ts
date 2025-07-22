@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { generateSchemaName } from '@swisscommerce/utils';
+import { generateSchemaName } from '@shopen/utils';
 
 export class PrismaService {
   private prisma: PrismaClient;

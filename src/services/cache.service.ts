@@ -1,6 +1,6 @@
 import { RedisService } from './redis.service';
 import { CACHE_TTL } from '../constants';
-import { generateTenantCachePrefix } from '@swisscommerce/utils';
+import { generateTenantCachePrefix } from '@shopen/utils';
 
 export interface CacheOptions {
   ttl?: number;
