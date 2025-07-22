@@ -59,11 +59,11 @@ export class TwintService implements PaymentGateway {
       });
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json() as any;
         throw new Error(`Twint API error: ${error.message || response.statusText}`);
       }
 
-      const data: TwintPaymentResponse = await response.json();
+      const data = await response.json() as TwintPaymentResponse;
       
       return {
         id: data.paymentId,
@@ -98,7 +98,7 @@ export class TwintService implements PaymentGateway {
         throw new Error(`Failed to get Twint payment status: ${response.statusText}`);
       }
 
-      const data: TwintPaymentResponse = await response.json();
+      const data = await response.json() as TwintPaymentResponse;
       
       return {
         id: intentId,
@@ -139,11 +139,11 @@ export class TwintService implements PaymentGateway {
       });
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json() as any;
         throw new Error(`Twint refund error: ${error.message || response.statusText}`);
       }
 
-      const data = await response.json();
+      const data = await response.json() as any;
       
       return {
         id: data.refundId,
@@ -241,7 +241,7 @@ export class TwintService implements PaymentGateway {
         throw new Error(`Failed to generate QR code: ${response.statusText}`);
       }
 
-      const data = await response.json();
+      const data = await response.json() as any;
       return data.qrCodeData; // Base64 encoded QR code image
     } catch (error) {
       console.error('Twint generateQRCode error:', error);
